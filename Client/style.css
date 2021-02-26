@@ -1,0 +1,194 @@
+/*
+Theme Name: Elementor Hello Child
+Theme URI: https://elementor.com/hello-theme/?utm_source=wp-themes&utm_campaign=theme-uri&utm_medium=wp-dash
+Text Domain: elementor-hello-child
+Description: Elementor Hello child theme for adding code.
+Author: Hayden Soule
+Author URI: https://haydensoule.com
+Template: hello-elementor
+Version: 0.0.1
+
+Tags: flexible-header, custom-colors, custom-menu, custom-logo, featured-images, rtl-language-support, threaded-comments, translation-ready
+License: GNU General Public License v3 or later
+License URI: https://www.gnu.org/licenses/gpl-3.0.html
+*/
+
+/* Theme customization starts here
+------------------------------------------------------- */
+
+/* Use body to override elementor styling not .site */
+html,
+body {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+body {
+	background-color: #000; 
+  	margin: 0;
+	padding: 0;
+	touch-action: manipulation;
+}
+
+.ring-container {
+	/* display: none; */
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100vh;
+  	height: calc(var(--vh, 1vh) * 100);
+	
+	width: 100vw;
+	margin: 0;
+	border: 0;
+
+	touch-action: manipulation;
+}
+
+/* .ring-display-container {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height:100vh;
+	width: 100vw;
+	margin: 0;
+	border: 0;
+} */
+
+/* img{border:1px solid #000;} */
+/* img + img{position:absolute;top:0; left:0;} */
+
+.ring {
+	position: absolute;
+	max-width: 80vw !important;
+	max-height: 80vh !important;
+	margin: auto;
+	/* padding-bottom:5vh; */
+	vertical-align: middle;
+	top: 50%;
+	left: 50%;
+	transform-origin: top left;
+	transform: translate(-50%, -55%);
+	
+	touch-action: manipulation;
+}
+
+/* The Modal (background) */
+.popup {
+  	display: none;
+  	position: absolute;
+ 	z-index: 10;
+  	left: 0;
+  	top: 0;
+  	width: 100vw;
+  	height: 100vh;
+  	height: calc(var(--vh, 1vh) * 100);
+	  
+  	margin: 0;
+	padding: 0;
+	border: 0;
+  	overflow: auto;
+  	/* background-color: rgb(1,1,1); */
+  	background-color: rgba(1,1,1,0.8);
+}
+
+/* Modal Content/Box */
+.popup-content {
+	position: absolute;
+  	background-color: #fefefe;
+  	margin: auto;
+	vertical-align:middle;
+	top: 50%;
+	left: 50%;
+	transform-origin: top left;
+	transform: translate(-50%, -50%);
+	
+	padding: 5% 5% 2%!important;
+	box-shadow: 0px 0px 20px #000000;  
+}
+
+/* The Close Button */
+.close {
+	text-align: center;
+  	color: #666666;
+
+  	font-size: 28px;
+	font-weight: bold;
+	padding-top: 8%;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.scanner-holder {
+	/* position: fixed; */
+	/* display: none; */
+	opacity: 0
+}
+
+.relative-holder {
+	position: absolute;
+}
+
+#qrButton {
+	position: absolute;
+	z-index: 1;
+	font-size: 1rem;
+	
+	/* margin: auto; */
+
+	bottom: 5vh;
+	left: 50%;
+	transform: translate(-50%, -50%);
+
+	transition: all 0s !important;
+}
+
+#htmlContainer {
+	height: 100vh !important;
+  	height: calc(var(--vh, 1vh) * 100) !important;
+}
+
+button,
+[type="submit"],
+[type="button"] {
+  font-weight: 400;
+  color: #fff;
+  border: 1px solid #fff;
+}
+
+button:hover, button:focus,
+[type="submit"]:hover,
+[type="submit"]:focus,
+[type="button"]:hover,
+[type="button"]:focus {
+	color: #fff;
+	background-color: #ffffff50;
+	text-decoration: none
+}
+
+/**********     Media Rules     **********/
+@media screen and (max-width: 750px) {
+	.ring {
+		max-width: 80vw !important;
+		max-height: 80vh !important;
+		transform: translate(-50%, -55%);
+	}
+
+	#qrButton {
+		bottom: 5vh;
+	}
+}
+
+@media screen and (max-width: 450px) {
+  .ring {
+		max-width: 95vw !important;
+		max-height: 95vh !important;
+		transform: translate(-50%, -60%);
+	}
+}
